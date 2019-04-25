@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practica Hipermedial</title>
+    <link rel="stylesheet" href="../vista/css/crear_usuario.css">
+</head>
+
+<body>
+    <form action="../formulario/php/procesar.php" method="POST">
+        <h2>Creacion de nuevos Usuarios</h2>
+
+        <input type="text" name="Cedula" placeholder="Cedula" required>
+        <input type="text" name="Nombre" placeholder="Nombre" required>
+        <input type="text" name="Apellido" placeholder="Apellido" required>
+        <input type="text" name="Direccion" placeholder="Direccion" required>
+        <input type="text" name="Telefono" placeholder="Telefono" required>
+        <input type="email" name="Email" placeholder="Email" required>
+        <input type="password" name="Password" placeholder="Contraseña" >
+        <input type="password" name="PasswordConf" placeholder="Confirme la contraseña">
+        <input type="date" name="FechaNac" required>
+        
+        
+        
+        <input id="boton" type="submit" value="Registrar" required>
+
+
+    </form>
+</body>
+
+</html>
