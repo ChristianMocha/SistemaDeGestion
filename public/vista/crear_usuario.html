@@ -10,22 +10,20 @@
 </head>
 
 <body>
-    <form action="../formulario/php/procesar.php" method="POST">
+    <form action="../../public/controladores/crear_usuario.php" method="POST">
         <h2>Creacion de nuevos Usuarios</h2>
 
-        <input type="text" name="Cedula" placeholder="Cedula" required>
-        <input type="text" name="Nombre" placeholder="Nombre" required>
-        <input type="text" name="Apellido" placeholder="Apellido" required>
-        <input type="text" name="Direccion" placeholder="Direccion" required>
-        <input type="text" name="Telefono" placeholder="Telefono" required>
-        <input type="email" name="Email" placeholder="Email" required>
-        <input type="password" name="Password" placeholder="Contraseña" >
-        <input type="password" name="PasswordConf" placeholder="Confirme la contraseña">
-        <input type="date" name="FechaNac" required>
-        
-        
-        
+        <input type="text" name="cedula" placeholder="Cedula" required>
+        <input type="text" name="nombres" placeholder="Nombre" required>
+        <input type="text" name="apellidos" placeholder="Apellido" required>
+        <input type="text" name="direccion" placeholder="Direccion" required>
+        <input type="text" name="telefono" placeholder="Telefono" required>
+        <input type="email" name="correo" placeholder="Email" required>
+        <input type="date" name="fechaNacimiento" required>
+        <input type="password" name="contrasena" placeholder="Contraseña" >
+        <!-- <input type="password" name="PasswordConf" placeholder="Confirme la contraseña"> -->
         <input id="boton" type="submit" value="Registrar" required>
+        <!-- <input type="reset" id="cancelar" name="cancelar" value="Cancelar" /> -->
 
 
     </form>
