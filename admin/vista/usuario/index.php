@@ -8,7 +8,8 @@
 </head>
 
 <body>
-    <table id="tabla" >
+    <h1>Lista de usuarios</h1>
+    <table>
         <tr>
             <th>Cedula</th>
             <th>Nombres</th>
@@ -17,6 +18,9 @@
             <th>Telefono</th>
             <th>Correo</th>
             <th>Fecha Nacimiento</th>
+            <th>Eliminar</th>
+            <th>Modificar</th>
+            <th>Cambiar Contrasena</th>
         </tr>
         <?php
         include '../../../config/conexionBD.php';
@@ -32,6 +36,12 @@
                 echo "<td>" . $row['usu_telefono'] . "</td>";
                 echo "<td>" . $row['usu_correo'] . "</td>";
                 echo "<td>" . $row['usu_fecha_nacimiento'] . "</td>";
+                $user =serialize($row);
+                $user= urlencode($user);
+                echo '<td><a href="eliminar.php?user='. $user .'">Eliminar</a></td>';
+               
+                echo '<td><a href="modificar_usuario.php?user='. $user .'">Modificar Usuario</a></td>';
+                echo '<td><a href="cambiar_contrasena.php?user='. $user .'">Cambiar contrasena</a></td>';
                 echo "</tr>";
             }
         } else {
