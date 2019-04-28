@@ -20,6 +20,7 @@ $sql = "INSERT INTO usuario VALUES (0, '$cedula', '$nombres', '$apellidos', '$di
 
 if ($conn->query($sql) === TRUE) {
     echo "<p>Se ha creado los datos personales correctamemte!!!</p>";
+    header("Location: ../vista/login.html");
 } else {
     if ($conn->errno == 1062) {
         echo "<p class='error'>La persona con la cedula $cedula ya esta registrada en el sistema </p>";
@@ -29,7 +30,7 @@ if ($conn->query($sql) === TRUE) {
 }
 //cerrar la base de datos
 $conn->close();
-echo "<a href='../vista/crear_usuario.html'>Regresar</a>";
+//echo "<a href='../vista/crear_usuario.html'>Regresar</a>";
 ?>
 
 
