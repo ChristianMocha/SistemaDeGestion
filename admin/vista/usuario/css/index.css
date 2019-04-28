@@ -1,0 +1,59 @@
+
+body{
+    /* background: linear-gradient(to bottom, 
+    rgba(211, 135, 20, .6),
+    rgba(29, 241, 171, .6), 
+    rgba(7, 109, 150, .45),
+    rgba(255, 0, 255, .3),
+    rgba(128, 0, 128, .3)); */
+     /* url(../../../../public/vista/img/nature-lake-landscape-reflection-fog-lake-sunrise-blue-tree-ultrahd-4k-wallpaper-160673.jpg); */
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;*/
+    text-align: center; 
+    font-family: rale;   
+}
+
+#tabla{
+    top: 20px;
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    margin-left: center;
+}
+table{
+    border: 2px solid #fff;
+    border-collapse: collapse;
+    color: #000;
+}
+table th{
+    border: 2px solid #fff;
+    padding: 5px;
+    background: linear-gradient(to bottom,
+    rgba(255, 255, 255, .6),
+    rgba(0, 0, 0, .6));
+
+}
+table td{
+    border: 2px solid #fff;
+    padding: 5px;
+    
+}
+table td:hover{
+    background: #000;
+    color: #fff;
+    
+}
+table tr:hover{
+    background: linear-gradient(to bottom,
+    rgba(0, 255, 247, .9),
+    rgba(0, 157, 152, .9),
+    rgba(0, 123, 119, .9),
+    rgba(0, 78, 76, .9),
+    rgba(0, 0, 0, .9));
+    color: #000;  
+}
+@font-face {
+    font-family: rale;
+    src: url(../../../../public/vista/fuentes/Raleway-Regular.ttf)
+}

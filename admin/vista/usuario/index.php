@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Gestión de usuarios</title>
+    <link rel="stylesheet" href="../usuario/css/index.css">
 </head>
 
 <body>
-    <table style="width:100%">
+    <table id="tabla" >
         <tr>
             <th>Cedula</th>
             <th>Nombres</th>
@@ -24,13 +25,13 @@
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
-                echo " <td>" . $row["usu_cedula"] . "</td>";
-                echo " <td>" . $row['usu_nombres'] . "</td>";
+                echo "<td>" . $row["usu_cedula"] . "</td>";
+                echo "<td>" . $row['usu_nombres'] . "</td>";
                 echo "<td>" . $row['usu_apellidos'] . "</td>";
-                echo "<td >" . $row['usu_direccion'] . "</td>"; 
+                echo "<td>" . $row['usu_direccion'] . "</td>"; 
                 echo "<td>" . $row['usu_telefono'] . "</td>";
-                echo " <td>" . $row['usu_correo'] . "</td>";
-                echo " <td>" . $row['usu_fecha_nacimiento'] . "</td>";
+                echo "<td>" . $row['usu_correo'] . "</td>";
+                echo "<td>" . $row['usu_fecha_nacimiento'] . "</td>";
                 echo "</tr>";
             }
         } else {
