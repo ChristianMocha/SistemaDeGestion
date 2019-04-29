@@ -11,6 +11,7 @@
     <h1>Lista de usuarios</h1>
     <table>
         <tr>
+            <th>Codigo</th>
             <th>Cedula</th>
             <th>Nombres</th>
             <th>Apellidos</th>
@@ -29,6 +30,7 @@
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
+                echo "<td>" . $row["usu_codigo"] . "</td>";
                 echo "<td>" . $row["usu_cedula"] . "</td>";
                 echo "<td>" . $row['usu_nombres'] . "</td>";
                 echo "<td>" . $row['usu_apellidos'] . "</td>";
@@ -40,8 +42,10 @@
                 $user= urlencode($user);
                 echo '<td><a href="eliminar.php?user='. $user .'">Eliminar</a></td>';
                
-                echo '<td><a href="modificar_usuario.php?user='. $user .'">Modificar Usuario</a></td>';
-                echo '<td><a href="cambiar_contrasena.php?user='. $user .'">Cambiar contrasena</a></td>';
+                echo '<td><a href="modificar_usuario.php?usu_codigo='. $row['usu_codigo'] .'">Modificar Usuario</a></td>';
+
+
+                echo '<td><a href="cambiar_contrasena.php?usu_cod='.$row["usu_codigo"].'">Cambiar Contrasena</a></td>';
                 echo "</tr>";
             }
         } else {
