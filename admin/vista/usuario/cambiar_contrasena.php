@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Practica Hipermedial</title>
-    <!-- <link rel="stylesheet" href="../usuario/css/modificar_usuario.css"> -->
+    <link rel="stylesheet" href="../usuario/css/modificar_usuario.css"> 
 </head>
 
 <body>

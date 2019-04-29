@@ -38,9 +38,8 @@
                 echo "<td>" . $row['usu_telefono'] . "</td>";
                 echo "<td>" . $row['usu_correo'] . "</td>";
                 echo "<td>" . $row['usu_fecha_nacimiento'] . "</td>";
-                $user =serialize($row);
-                $user= urlencode($user);
-                echo '<td><a href="eliminar.php?user='. $user .'">Eliminar</a></td>';
+
+                echo '<td><a href="eliminar.php?usu_codigo='. $row['usu_codigo'] . '&delete='.true.'">Eliminar</a></td>';
                
                 echo '<td><a href="modificar_usuario.php?usu_codigo='. $row['usu_codigo'] .'">Modificar Usuario</a></td>';
 
