@@ -1,5 +1,13 @@
 <?php
 
+session_start();
+if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE) {
+    echo"<scrip>alert('No tiene permiso para ingresar')</scrip>";
+    header("Location: ../../../public/controladores/login.php");
+}
+?>
+<?php
+
 
 $consulta = ConsultarUsuario($_GET['usu_codigo']);
 
@@ -32,9 +40,27 @@ function ConsultarUsuario($codigo)
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Practica Hipermedial</title>
     <link rel="stylesheet" href="../usuario/css/modificar_usuario.css">
+    <link rel="stylesheet" href="../../../public/vista/css/cabecera.css"> 
 </head>
 
 <body>
+<header>
+        <!--Menu de Navegacion-->
+        <div class="ancho">
+            <nav>
+                <ul>
+                 
+                  <li><a href="index.php">Modificar</a></li>
+                  <li><a href="../usuario/cerrarSeccion.php">Cerrar Seccion</a></li>
+                </ul>
+            </nav>
+    
+        </div>
+    
+    </header>
+    <br>
+    <br>
+    <br>
     <form action="../usuario/modificar_usuario2.php" method="POST">
         <h2>Creacion de nuevos Usuarios</h2>
         <input type="hidden" name="uso_codigo" value="<?php echo $_GET['usu_codigo'] ?>">

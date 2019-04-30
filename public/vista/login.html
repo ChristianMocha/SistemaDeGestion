@@ -7,9 +7,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
     <link rel="stylesheet" href="../vista/css/login.css">
+    <link rel="stylesheet" href="../vista/css/cabecera.css">
 </head>
 
 <body>
+  
+
+  <header>
+    <!--Menu de Navegacion-->
+    <div class="ancho">
+        <nav>
+            <ul>
+              <li><a href="crear_usuario.html">Crear Usuario</a></li>
+              <li><a href="../../admin/vista/usuario/index.php">Modificar</a></li>
+              <li><a href="../../admin/vista/usuario/cerrarSeccion.php">Cerrar Sesion</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+
   <form action="../controladores/login.php" method="POST">
       <h2>Login</h2>
       <input type="email" name="correo" placeholder="correo" required>

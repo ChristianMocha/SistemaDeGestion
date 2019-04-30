@@ -7,10 +7,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Practica Hipermedial</title>
     <link rel="stylesheet" href="../vista/css/crear_usuario.css">
+    <link rel="stylesheet" href="../vista/css/cabecera.css">
 </head>
 
 <body>
+
+    <header>
+        <!--Menu de Navegacion-->
+        <div class="ancho">
+            <nav>
+                <ul>
+                  <li><a href="../vista/crear_usuario.html">Crear Usuario</a></li>
+                  <li><a href="../../admin/vista/usuario/index.php">Modificar</a></li>
+                  <li><a href="../../public/controladores/login.php">Iniciar Sesion</a></li>
+                </ul>
+            </nav>
+    
+        </div>
+    
+    </header>
+    <br>
+    <br>
+    <br>
+    
+    
     <form action="../controladores/crear_usuario.php" method="POST">
+
         <h2>Creacion de nuevos Usuarios</h2>
 
         <input type="text" name="cedula" placeholder="Cedula" required>
@@ -23,6 +45,7 @@
         <input type="password" name="contrasena" placeholder="Contraseña" >
         <!-- <input type="password" name="PasswordConf" placeholder="Confirme la contraseña"> -->
         <input id="boton" type="submit" value="Registrar" required>
+
         <!-- <input type="reset" id="cancelar" name="cancelar" value="Cancelar" /> -->
 
 

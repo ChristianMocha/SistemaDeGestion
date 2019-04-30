@@ -1,21 +1,30 @@
 <?php
-include '../../../config/conexionBD.php';
-$condigo = isset($_POST["usu_codigo"]) ? trim($_POST["usu_codigo"]) : null;
-$delete = isset($_POST["delete"]) ? trim($_POST["delete"]) : null;
 
-if($condigo != null and $delete==true){
-    $sql = "UPDATE usuario SET usu_eliminado='S' WHERE usu_codigo='$condigo'";
-    $result = $conn->query($sql);
-    header("Local: ../usuario/index.php");
-
-}elseif($condigo !=null and $delete==false){
-    $sql= "UPDATE usuario SET usu_eliminado='N' WHERE usu_codigo='$codigo';"; 
-    $result = $conn->query($sql);
-    header("Location: ../usuario/index.php");
-
-}else{
-    header("Location: ../usuario/index.php");
+session_start();
+if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE) {
+    echo"<scrip>alert('No tiene permiso para ingresar')</scrip>";
+    header("Location: ../../../public/controladores/login.php");
 }
-$conn->close();
 ?>
+<?php
+    include '../../../config/conexionBD.php';
+    $cod= isset($_GET["usu_codigo"]) ? trim($_GET["usu_codigo"]):null;             
+    $delete = isset($_GET["delete"]) ? trim($_GET["delete"]):null;
 
+    if($cod!=null and $delete==true){
+        date_default_timezone_set("America/Guayaquil");
+        $fecha = date('Y-m-d H:i:s', time());
+        
+        $sql= "UPDATE usuario SET usu_eliminado='S', usu_fecha_modificacion= '$fecha' WHERE usu_codigo='$cod';";  
+                   
+        $result = $conn->query($sql);
+        header("Location: ../usuario/index.php");
+    }elseif($cod!=null and $delete==false){
+        $sql= "UPDATE usuario SET usu_eliminado='N' WHERE usu_codigo='$cod';";             
+        $result = $conn->query($sql);
+        header("Location: ../usuario/index.php");
+    }else{
+        header("Location: ../usuario/index.php");
+    }
+    $conn->close();
+?>

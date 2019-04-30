@@ -1,4 +1,10 @@
 <?php
+session_start();
+if (!$_SESSION['isLogged']) {
+    header("Location: ../../../public/controladores/login.php");
+}
+?>
+<?php
 
 
 include '../../../config/conexionBD.php';
@@ -16,7 +22,7 @@ if (MD5($actual) === $result["usu_password"]) {
     if ($nueva === $repnueva) {
         $sql = "UPDATE usuario SET usu_password = MD5('$nueva') WHERE usu_codigo ='$cod'";
         if ($conn->query($sql) === true) {
-            echo "<h2>Contrasena actulizada con exito</h2>";
+            header("Location: index.php");
         } else {
             header("Location: ../usuario/cambiar_contrasena.php");
         }
