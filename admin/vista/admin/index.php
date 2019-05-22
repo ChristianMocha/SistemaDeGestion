@@ -11,7 +11,7 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
 <head>
     <meta charset="UTF-8">
     <title>Gestión de usuarios</title>
-    <link rel="stylesheet" href="../usuario/css/index.css">
+    <link rel="stylesheet" href="../admin/css/index.css">
     <link rel="stylesheet" href="../../../public/vista/css/cabecera.css">
 </head>
 
@@ -25,7 +25,7 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
                 <ul>
                    
                     
-                    <li><a href="../usuario/cerrarSeccion.php">Cerrar Seccion</a></li>
+                    <li><a href="../admin/cerrarSeccion.php">Cerrar Seccion</a></li>
                 </ul>
             </nav>
 
@@ -78,9 +78,9 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
                 echo "<td>" . $row['usu_fecha_nacimiento'] . "</td>";
 
                 if ((string)$row["usu_eliminado"] === 'N') {
-                    echo '<td><a href="../usuario/eliminar.php?usu_codigo=' . $row["usu_codigo"] . '&delete=' . true . '">Eliminar</a></td>';
+                    echo '<td><a href="../admin/eliminar.php?usu_codigo=' . $row["usu_codigo"] . '&delete=' . true . '">Eliminar</a></td>';
                 } else {
-                    echo '<td><a href="../usuario/eliminar.php?usu_codigo=' . $row["usu_codigo"] . '">Activar</a></td>';
+                    echo '<td><a href="../admin/eliminar.php?usu_codigo=' . $row["usu_codigo"] . '">Activar</a></td>';
                 }
 
                 echo '<td><a href="modificar_usuario.php?usu_codigo=' . $row['usu_codigo'] . '">Modificar Usuario</a></td>';

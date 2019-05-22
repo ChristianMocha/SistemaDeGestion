@@ -51,7 +51,7 @@ function ConsultarUsuario($codigo)
                 <ul>
                  
                   <li><a href="index.php">Modificar</a></li>
-                  <li><a href="../usuario/cerrarSeccion.php">Cerrar Seccion</a></li>
+                  <li><a href="../admin/cerrarSeccion.php">Cerrar Seccion</a></li>
                 </ul>
             </nav>
     
@@ -61,7 +61,7 @@ function ConsultarUsuario($codigo)
     <br>
     <br>
     <br>
-    <form action="../usuario/modificar_usuario2.php" method="POST">
+    <form action="../admin/modificar_usuario2.php" method="POST">
         <h2>Creacion de nuevos Usuarios</h2>
         <input type="hidden" name="uso_codigo" value="<?php echo $_GET['usu_codigo'] ?>">
         <input type="text" name="cedula" placeholder="Cedula" value="<?php echo $consulta[0] ?>" required>

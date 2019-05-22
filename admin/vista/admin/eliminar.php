@@ -18,13 +18,13 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE) {
         $sql= "UPDATE usuario SET usu_eliminado='S', usu_fecha_modificacion= '$fecha' WHERE usu_codigo='$cod';";  
                    
         $result = $conn->query($sql);
-        header("Location: ../usuario/index.php");
+        header("Location: ../admin/index.php");
     }elseif($cod!=null and $delete==false){
         $sql= "UPDATE usuario SET usu_eliminado='N' WHERE usu_codigo='$cod';";             
         $result = $conn->query($sql);
-        header("Location: ../usuario/index.php");
+        header("Location: ../admin/index.php");
     }else{
-        header("Location: ../usuario/index.php");
+        header("Location: ../admin/index.php");
     }
     $conn->close();
 ?>

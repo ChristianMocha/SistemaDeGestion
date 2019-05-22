@@ -24,7 +24,7 @@ if (MD5($actual) === $result["usu_password"]) {
         if ($conn->query($sql) === true) {
             header("Location: index.php");
         } else {
-            header("Location: ../usuario/cambiar_contrasena.php");
+            header("Location: ../admin/cambiar_contrasena.php");
         }
     }
 }
